@@ -6,7 +6,8 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import AddReviewPage from "./pages/AddBookPage/AddBookPage";
+import BookDetailsPage from "./pages/BookDetailsPage/BookDetailsPage";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -28,16 +29,11 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/add"
-          element={
-            <PrivateRoute>
-              <AddReviewPage />
-            </PrivateRoute>
-          }
-        />
+
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/book details" element={<BookDetailsPage />} /> */}
+        <Route path="/searchpage" element={<SearchPage />} />
       </Routes>
       <Footer />
     </div>

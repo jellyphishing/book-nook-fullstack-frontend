@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../..hooks/useAuth";
 import useCustomForm from "../../hooks/useCustomForm";
 
-const AddReviewPage = (props) => {
+const addReviewPage = (props) => {
   const [user, token] = useAuth();
   const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ const AddReviewPage = (props) => {
   async function postNewReview() {
     console.log("Form Submitted");
   }
-
+  // add axios post request here
   return (
     <div className="container">
       <h1>Share your thoughts! Write a review!</h1>
@@ -49,4 +49,4 @@ const AddReviewPage = (props) => {
   );
 };
 
-export default AddReviewPage;
+export default addReviewPage;

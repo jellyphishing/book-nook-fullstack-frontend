@@ -12,8 +12,26 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/ASP.NET JWT Starter</b>
+            <b>Welcome to BookNook</b>
           </Link>
+        </li>
+        <li className="search">
+          <Link
+            to="/searchpage"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <b>Search</b>
+          </Link>
+        </li>
+        <li className="favorites">
+          {user ? (
+            <Link
+              to="/favoritespage"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <b>Favorites</b>
+            </Link>
+          ) : null}
         </li>
         <li>
           {user ? (
