@@ -7,6 +7,12 @@ const AddBookPage = (props) => {
   const [user, token] = useAuth();
   const navigate = useNavigate();
 
+  const [formData, handleInputChange, handleSubmit, reset] = useCustomForm();
+
+  const initialValues = 
+
+
+
   return (
     <>
       <p>Add Book Page</p>
