@@ -6,7 +6,35 @@ import ResultsList from "../../components/ResultsList/ResultsList";
 import "./SearchPage.css";
 
 const SearchPage = () => {
-  return <h1>Search Page</h1>;
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+    const fetchBooks = async () => {
+        try{
+            let lowerCaseSearch = searchTerm.toLowerCase();
+            let response = await axios.get(
+                `http`
+            )
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return <h1>Search Page</h1>;
 };
 
 export default SearchPage;
