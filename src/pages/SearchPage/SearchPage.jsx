@@ -27,7 +27,7 @@ const SearchPage = () => {
   };
 
   return (
-    <div classNAme="container search">
+    <div className="container search">
       <h1>Search Page!</h1>
       <SearchBar
         searchTerm={searchTerm}

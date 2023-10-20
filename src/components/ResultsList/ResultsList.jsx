@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ResultsList = () => {
-  return <h1>Results List</h1>;
+  return <h3>Results List</h3>;
 };
 
 export default ResultsList;
