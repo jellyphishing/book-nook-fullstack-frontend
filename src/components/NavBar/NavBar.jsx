@@ -26,7 +26,7 @@ const Navbar = () => {
         <li className="favorites">
           {user ? (
             <Link
-              to="/favoritespage"
+              to="/favorites"
               style={{ textDecoration: "none", color: "white" }}
             >
               <b>Favorites</b>

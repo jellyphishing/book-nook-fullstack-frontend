@@ -33,8 +33,9 @@ function App() {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/detailspage" element={<DetailsPage />} />
         <Route path="/searchpage" element={<SearchPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/:bookId" element={<DetailsPage />} />
       </Routes>
       <Footer />
     </div>

@@ -21,6 +21,15 @@ const DetailsPage = () => {
     }
   };
 
+  const postNewFavorite = async () => {
+    try {
+      let response = await axios.post(`https://localhost:5001/api/favorites/`);
+      setNewFavorite(response.data.bookId);
+    } catch (error) {
+      console.log("Error in post new favorite: ", error);
+    }
+  };
+
   return (
     <div className="container">
       {bookDetails ? (

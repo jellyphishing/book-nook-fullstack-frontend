@@ -7,10 +7,10 @@ const ResultsList = ({ searchResults }) => {
   return (
     <div className="resultsList">
       <h2>Results List:</h2>
-      {searchResults.map((bookId, index) => (
-        <Link to={`/${bookId.books.title}`} key={index}>
+      {searchResults.map((items, index) => (
+        <Link to={`/${items.id}`} key={index}>
           <div key={index}>
-            <h3>{bookId.books.title} </h3>
+            <h3>{items.volumeInfo.title} </h3>
           </div>
         </Link>
       ))}

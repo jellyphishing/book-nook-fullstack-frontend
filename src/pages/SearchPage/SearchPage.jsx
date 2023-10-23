@@ -15,7 +15,7 @@ const SearchPage = () => {
       let response = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=/${lowerCaseSearch}/`
       );
-      setSearchResults(response.data.volumeInfo);
+      setSearchResults(response.data.items);
     } catch (error) {
       console.log("Error in fetchBooks: ", error);
     }
