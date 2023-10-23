@@ -6,8 +6,9 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import BookDetailsPage from "./pages/BookDetailsPage/BookDetailsPage";
+import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import SearchPage from "./pages/SearchPage/SearchPage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -30,10 +31,9 @@ function App() {
             </PrivateRoute>
           }
         />
-
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/book details" element={<BookDetailsPage />} /> */}
+        <Route path="/detailspage" element={<DetailsPage />} />
         <Route path="/searchpage" element={<SearchPage />} />
       </Routes>
       <Footer />

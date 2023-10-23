@@ -13,15 +13,15 @@ const SearchPage = () => {
     try {
       let lowerCaseSearch = searchTerm.toLowerCase();
       let response = await axios.get(
-        `https://localhost:5001/api/bookId/${lowerCaseSearch}/`
+        `https://www.googleapis.com/books/v1/volumes?q=/${lowerCaseSearch}/`
       );
-      setSearchResults(response.data.bookList);
+      setSearchResults(response.data.volumeInfo);
     } catch (error) {
       console.log("Error in fetchBooks: ", error);
     }
   };
 
-  const handleSUbmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     fetchBooks();
   };
@@ -32,7 +32,7 @@ const SearchPage = () => {
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        handleSubmit={handleSUbmit}
+        handleSubmit={handleSubmit}
       />
       <ResultsList searchResults={searchResults} />
     </div>
